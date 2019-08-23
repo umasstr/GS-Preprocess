@@ -1,4 +1,6 @@
 # GS-Preprocess
+# Introduction 
+GS-Preprocess is a simple, 5-argument pipeline that generates input data for the GUIDEseq Bioconductor package (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. 
 ## Prerequisites
 ***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
 
