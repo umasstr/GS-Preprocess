@@ -51,8 +51,8 @@ Compatible libraries are constructed according to *GUIDE-seq enables genome-wide
 Example:
 >module add bcl2fastq2/2.20.0
 ## Download GS-Preprocess
+In cluster working directory
 	git clone https://github.com/umasstr/GS-Preprocess.git
-	scp -r GS-Preprocess/ user@computing.cluster:/path/to/home/dir/
 ## Workflow
 
 ## Prepare the Pipeline
