@@ -41,7 +41,7 @@ This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONF
 		|-- Thumbnail_Images
 
      - **Illumina-format SampleSheet**: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output)
-
+![alt text](SampleSheet2.jpg)
      - **RunInfo.xml**: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. *RunInfo.xml is found in the top-level output folder of any sequencing run*
 
 3. **BWA Index Download**: https://support.illumina.com/sequencing/sequencing_software/igenome.html
