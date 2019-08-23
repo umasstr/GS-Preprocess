@@ -103,6 +103,10 @@ Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus 
 	
 - 8 cores, 48G RAM
 	
+		Total Runtime: 130 min
+		CPU time: 23578.08 sec
+    		Max Memory: 12673 MB
+    		Average Memory: 4451.26 MB
 		___
 - 24 cores, 48G RAM
 
