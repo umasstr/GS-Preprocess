@@ -84,5 +84,5 @@ Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
 2. Enter in your gRNA name and sequence
 3. Save this 2-line text file with a **.fa extension**
 
-	\>*gRNA_or_gene_name*
-	GAGTCCGAGCAGAAGAAGAA
+		\> *gRNA_or_gene_name*
+		GAGTCCGAGCAGAAGAAGAA
