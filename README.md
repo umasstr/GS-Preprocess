@@ -2,9 +2,13 @@
 ## Usage and Prerequisites
 ***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
 
-Illumina-format SampleSheet: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/
+Illumina output folder: Download from BaseSpace or directly from any Illumina sequencer after run completion. 
 
-RunInfo.xml: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. 
+Illumina-format SampleSheet: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output)
+
+RunInfo.xml: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. *RunInfo.xml is found in the top-level output folder of any sequencing run*
+
+
 
 BWA Index Download: https://support.illumina.com/sequencing/sequencing_software/igenome.html
 
