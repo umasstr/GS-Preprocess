@@ -1,8 +1,27 @@
 # GS-Preprocess
-## Usage and Prerequisites
+## Prerequisites
 ***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
 
 **Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. 
+	
+	Run_output_dir
+	|-- Config
+	|-- Data
+	|-- Images
+	|-- InterOp
+	|-- Logs
+	|-- RTAComplete.txt
+	|-- RTAConfiguration.xml
+	|-- RTALogs
+	|-- RTARead1Complete.txt
+	|-- RTARead2Complete.txt
+	|-- RTARead3Complete.txt
+	|-- RTARead4Complete.txt
+	|-- Recipe
+	|-- RunCompletionStatus.xml
+	|-- RunInfo.xml
+	|-- RunParameters.xml
+	|-- Thumbnail_Images
 
 **Illumina-format SampleSheet**: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output)
 
