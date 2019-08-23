@@ -63,7 +63,7 @@ Make all files executable
 
 	chmod +x *
 ## Run the Pipeline
-
+	./gs_preprocess.sh -t <number_of_threads> -o <output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
 - [ ] guideRNA.fa
