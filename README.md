@@ -2,11 +2,13 @@
 ## Introduction 
 GS-Preprocess is a simple, 5-argument pipeline that generates input data for the GUIDEseq Bioconductor package (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. The latter two are produced by GS-Preprocess.
 
-Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117). 
+Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
+
+![alt text](read_layout.png)
 ## Prerequisites
 ***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
 
-**Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. 
+**Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. No demultiplexing or fastq generation necessary!
 	
 	Run_output_dir
 	|-- Config
