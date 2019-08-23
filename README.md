@@ -78,7 +78,8 @@ Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor G
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
 - [ ] guideRNA.fa
-##guidrRNA fasta
+
+## guideRNA fasta
 Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
 1. Open any text editor
 2. Enter in your gRNA name and sequence
