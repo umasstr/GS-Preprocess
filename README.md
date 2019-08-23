@@ -3,8 +3,8 @@
 GS-Preprocess is a simple, 5-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. The latter two are produced by GS-Preprocess.
 
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
-
-## Set Up Sequencing Run
+## Getting Started
+### Set Up Sequencing Run
 This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONFIGURATION*** of the illumina machine. This represents a  flexible alternative to https://github.com/aryeelab/guideseq#miseq which requires a pre-configured MiSeq and sample manifest YAML.
 
 **Note:** Paired-end sequencing should include 8 Index1 (i7) cycles and **16** Index2 (i5) cycles:
@@ -15,9 +15,9 @@ This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONF
 
 ###### adapted from Tsai et al. 2014
 
-## Prerequisites
+### Prerequisites
 ***Intended for use on computing clusters***
-1. **≥50G of RAM allocated to the GS-Preprocess pipeline**
+1. **≥32G of RAM allocated to the GS-Preprocess pipeline**
 
 2. **Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. No demultiplexing or fastq generation necessary!
 	
@@ -46,7 +46,7 @@ This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONF
 
 3. **BWA Index Download**: https://support.illumina.com/sequencing/sequencing_software/igenome.html
 
-## Dependencies
+### Dependencies
 *Add the below dependencies:*
 
 	bcl2fastq2/2.20.0
@@ -62,24 +62,26 @@ Example:
 In cluster working directory
 
 	git clone https://github.com/umasstr/GS-Preprocess.git
-## Workflow
 
-## Prepare the Pipeline
+### Prepare the Pipeline
 Move into src directory
 
 	cd GS-Preprocess/src
 Make all files executable	
 
 	chmod +x *
+##  Workflow
 ## Run the Pipeline
 	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
 
-Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor GUIDEseq.
+Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor GUIDEseq and stores them in working directory (GS-Preprocess/src/) 
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
 - [ ] guideRNA.fa
+### Expected Runtime & Resource Usage
 
-## guideRNA fasta
+## Post GS-Preprocess Notes
+### guideRNA fasta
 Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
 1. Open any text editor
 2. Enter in your gRNA name and sequence
@@ -87,3 +89,8 @@ Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
 
 		>gRNA_or_gene_name
 		GAGTCCGAGCAGAAGAAGAA
+### Merging BAMs
+### Sample Bioconductor GUIDEseq Input
+
+
+
