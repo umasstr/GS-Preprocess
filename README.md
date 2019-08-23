@@ -1,6 +1,12 @@
 # GS-Preprocess
-## Useage and Prerequisites
-Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline
+## Usage and Prerequisites
+***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
+
+Illumina-format SampleSheet: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/
+
+RunInfo.xml: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. 
+
+BWA Index Download: https://support.illumina.com/sequencing/sequencing_software/igenome.html
 
 ## Dependencies
 *Add the below dependencies:*
@@ -13,7 +19,7 @@ Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Pr
 	gcc/8.1.0
 	
 Example:
-	module add bcl2fastq2/2.20.0
+>module add bcl2fastq2/2.20.0
 ## Download GS-Preprocess
 	git clone https://github.com/umasstr/GS-Preprocess.git
 	scp -r GS-Preprocess/ user@computing.cluster:/path/to/home/dir/
