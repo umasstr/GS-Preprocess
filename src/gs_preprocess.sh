@@ -1,13 +1,6 @@
 #!/bin/bash 
 echo "GUIDE-seq pre-processing for GHPCC"
 
-module add gcc/8.1.0
-module add R/3.6.0
-module add samtools/1.9
-module add bwa/0.7.5a
-module add cutadapt/1.9
-module add bcl2fastq2/2.20.0
-
 if [ "$1" == "-h" ]; then
   echo "-t <number_of_threads> -o <output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>"
   echo "gs_preprocess output: output_dir/bam_files"
@@ -36,7 +29,7 @@ done
 
 ./gs_demultiplex.sh -t $t -o $o -r $r -s $s
 
-./gs_I2.sh -t $t -r $i
+./gs_I2.sh -t $t -o $o -r $r
 
 python ./gs_cutadapt.py $o
 

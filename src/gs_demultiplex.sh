@@ -17,8 +17,8 @@ done
 #
 nohup bcl2fastq -r 1 -p $t -w 1 --runfolder-dir $r -o $o --use-bases-mask Y*,I*,N8I8,Y* --create-fastq-for-index-reads --sample-sheet $s
 #
-mkdir "$ou"/index_reads
-mv "$ou"/*_I*.fastq.gz "$ou"/index_reads
-mkdir "$ou"/Undetermined_reads
-mv "$ou"/Undetermined*.fastq.gz "$ou"/Undetermined_reads
+mkdir $o/index_reads
+mv $o/*_I*.fastq.gz $o/index_reads
+mkdir $o/Undetermined_reads
+mv $o/Undetermined*.fastq.gz $o/Undetermined_reads
 echo "to troubleshoot failed demultiplexing, try 'tail nohup.out'"
