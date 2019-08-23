@@ -13,7 +13,7 @@ Compatible libraries are constructed according to *GUIDE-seq enables genome-wide
 
 2. **Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. No demultiplexing or fastq generation necessary!
 	
-		Run_output_dir
+		Run_output_dir_Example
 		|-- Config
 		|-- Data
 		|-- Images
