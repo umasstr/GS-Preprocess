@@ -7,7 +7,7 @@ Compatible libraries are constructed according to *GUIDE-seq enables genome-wide
 ## Set Up Sequencing Run
 This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONFIGURATION*** of the illumina machine. This represents a  flexible alternative to https://github.com/aryeelab/guideseq#miseq which requires a pre-configured MiSeq and sample manifest YAML.
 
-*Note":* Paired-end sequencing should include 8 Index1 (i7) cycles and **16** Index2 (i5) cycles:
+*Note:* Paired-end sequencing should include 8 Index1 (i7) cycles and **16** Index2 (i5) cycles:
 	
 	R1 | 8 | 16 | R2
 
