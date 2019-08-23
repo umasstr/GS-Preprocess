@@ -8,34 +8,35 @@ Compatible libraries are constructed according to *GUIDE-seq enables genome-wide
 
 ###### adapted from Tsai et al. 2014
 ## Prerequisites
-***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
+***Intended for use on computing clusters***
+1. **≥50G of RAM allocated to the GS-Preprocess pipeline**
 
-**Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. No demultiplexing or fastq generation necessary!
+2. **Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. No demultiplexing or fastq generation necessary!
 	
-	Run_output_dir
-	|-- Config
-	|-- Data
-	|-- Images
-	|-- InterOp
-	|-- Logs
-	|-- RTAComplete.txt
-	|-- RTAConfiguration.xml
-	|-- RTALogs
-	|-- RTARead1Complete.txt
-	|-- RTARead2Complete.txt
-	|-- RTARead3Complete.txt
-	|-- RTARead4Complete.txt
-	|-- Recipe
-	|-- RunCompletionStatus.xml
-	|-- RunInfo.xml
-	|-- RunParameters.xml
-	|-- Thumbnail_Images
+		Run_output_dir
+		|-- Config
+		|-- Data
+		|-- Images
+		|-- InterOp
+		|-- Logs
+		|-- RTAComplete.txt
+		|-- RTAConfiguration.xml
+		|-- RTALogs
+		|-- RTARead1Complete.txt
+		|-- RTARead2Complete.txt
+		|-- RTARead3Complete.txt
+		|-- RTARead4Complete.txt
+		|-- Recipe
+		|-- RunCompletionStatus.xml
+		|-- RunInfo.xml
+		|-- RunParameters.xml
+		|-- Thumbnail_Images
 
-**Illumina-format SampleSheet**: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output)
+     - **Illumina-format SampleSheet**: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output)
 
-**RunInfo.xml**: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. *RunInfo.xml is found in the top-level output folder of any sequencing run*
+     - **RunInfo.xml**: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. *RunInfo.xml is found in the top-level output folder of any sequencing run*
 
-**BWA Index Download**: https://support.illumina.com/sequencing/sequencing_software/igenome.html
+3. **BWA Index Download**: https://support.illumina.com/sequencing/sequencing_software/igenome.html
 
 ## Dependencies
 *Add the below dependencies:*
