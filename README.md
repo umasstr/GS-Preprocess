@@ -74,6 +74,8 @@ Make all files executable
 ## Run the Pipeline
 	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
 
+To avoid errors, use absolute paths. 
+
 Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor GUIDEseq and stores them in working directory (GS-Preprocess/src/) 
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
