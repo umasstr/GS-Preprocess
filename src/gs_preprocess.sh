@@ -32,7 +32,7 @@ done
 ./gs_I2.sh -t $t -o $o -r $r
 
 python UMIbarcode_python2.py $o/temp_I2/*I2*.gz > UMIs.txt
-rm -rf temp_I2
+rm -rf $o/temp_I2
 
 python ./gs_cutadapt.py $o
 
