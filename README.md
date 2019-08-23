@@ -73,7 +73,15 @@ Make all files executable
 	chmod +x *
 ## Run the Pipeline
 	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
+
+Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor GUIDEseq.
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
 - [ ] guideRNA.fa
-
+##guidrRNA fasta
+Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
+1. Open any text editor
+2. Enter in your gRNA name and sequence
+3. Save this 2-line text file with a **.fa extension**
+	*gRNA_or_gene_name*
+	GAGTCCGAGCAGAAGAAGAA
