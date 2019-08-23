@@ -1,4 +1,14 @@
 # GS-Preprocess
+## Table of Contents
+[Introduction](https://github.com/umasstr/GS-Preprocess#introduction)
+
+[Getting Started](https://github.com/umasstr/GS-Preprocess#getting-started)
+- [Set Up Sequencing Run](https://github.com/umasstr/GS-Preprocess#set-up-sequencing-run)
+- [Prerequisites](https://github.com/umasstr/GS-Preprocess#prerequisites)
+- [Dependencies](https://github.com/umasstr/GS-Preprocess#dependencies)
+
+
+
 ## Introduction 
 GS-Preprocess is a simple, 5-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. The latter two are produced by GS-Preprocess.
 
@@ -58,7 +68,7 @@ This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONF
 	
 Example:
 >module add bcl2fastq2/2.20.0
-## Download GS-Preprocess
+### Download GS-Preprocess
 In cluster working directory
 
 	git clone https://github.com/umasstr/GS-Preprocess.git
