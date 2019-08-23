@@ -4,7 +4,7 @@ echo "GUIDE-seq pre-processing for GHPCC"
 if [ "$1" == "-h" ]; then
   echo "-t <number_of_threads> -o </path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>"
   echo "gs_preprocess output: output_dir/bam_files"
-  echo "Required: 50G RAM"
+  echo "Required: 32G RAM"
   echo "Illumina-format SampleSheet: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/"
   echo "RunInfo.xml: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. Standard output from any illumina sequencer"
   echo "BWA Index Download: https://support.illumina.com/sequencing/sequencing_software/igenome.html"
