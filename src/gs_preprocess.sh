@@ -36,8 +36,6 @@ rm -rf temp_I2
 
 python ./gs_cutadapt.py $o
 
-mv *.trim $o
-
 python ./bwa_gs.py $o $b $t
 
 for i in *.sam; do samtools view -Sb -@ $t $i > ${i%.*}.bam;done
