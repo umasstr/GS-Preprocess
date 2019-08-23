@@ -88,6 +88,7 @@ Make all files executable
 
 	chmod +x *
 ##  Workflow
+![alt text](workflow_gs2.png)
 ## Run the Pipeline
 	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
 
@@ -102,13 +103,17 @@ Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus 
 	
 - 8 cores, 48G RAM
 	
-		Ruin
+		___
 - 24 cores, 48G RAM
 
-		s
-- 24 cores, 48G RAM
+		Total Runtime: 22 min
+		CPU time: 11066.98 sec
+    		Max Memory: 12798 MB
+    		Average Memory: 2595.86 MB
 
-		s
+- 32 cores, 48G RAM
+
+		___
 ## Post GS-Preprocess Notes
 ### guideRNA fasta
 Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
