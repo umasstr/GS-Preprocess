@@ -40,6 +40,8 @@ mv *.trim $o
 
 python ./bwa_gs.py $o $b $t
 
-for i in $o/*.sam; do samtools view -Sb -@ $t $i > $o/${i%.*}.bam;done
+for i in *.sam; do samtools view -Sb -@ $t $i > ${i%.*}.bam;done
+rm *.sam
+
 
 
