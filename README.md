@@ -5,6 +5,8 @@ GS-Preprocess is a simple, 5-argument pipeline that generates input data for the
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
 
 ![alt text](read_layout.png)
+
+###### adapted from Tsai et al. 2014
 ## Prerequisites
 ***Intended for use on computing clusters with ≥50G of RAM allocated to the GS-Preprocess pipeline***
 
@@ -60,4 +62,8 @@ Make all files executable
 
 	chmod +x *
 ## Run the Pipeline
+
+- [x] plus- and minus-strand BAMs
+- [x] UMIs.txt
+- [ ] guideRNA.fa
 
