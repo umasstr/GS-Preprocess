@@ -4,9 +4,17 @@ GS-Preprocess is a simple, 5-argument pipeline that generates input data for the
 
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
 
+## Set Up Sequencing Run
+This pipeline is compatible with ***any sequencer*** and requires ***NO PRE-CONFIGURATION*** of the illumina machine. This represents a  flexible alternative to https://github.com/aryeelab/guideseq#miseq which requires a pre-configured MiSeq and sample manifest YAML.
+
+*Note":* Paired-end sequencing should include 8 Index1 (i7) cycles and **16** Index2 (i5) cycles:
+	
+	R1 | 8 | 16 | R2
+
 ![alt text](read_layout.png)
 
 ###### adapted from Tsai et al. 2014
+
 ## Prerequisites
 ***Intended for use on computing clusters***
 1. **≥50G of RAM allocated to the GS-Preprocess pipeline**
