@@ -79,7 +79,17 @@ Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor G
 - [x] UMIs.txt
 - [ ] guideRNA.fa
 ### Expected Runtime & Resource Usage
+Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus and minus strand):
+	
+- 8 cores, 48G RAM
+	
+		Ruin
+- 24 cores, 48G RAM
 
+		s
+- 24 cores, 48G RAM
+
+		s
 ## Post GS-Preprocess Notes
 ### guideRNA fasta
 Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
@@ -90,7 +100,29 @@ Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
 		>gRNA_or_gene_name
 		GAGTCCGAGCAGAAGAAGAA
 ### Merging BAMs
+Certain situations will require user to merge BAM files:
+1. A sequencer with multiple lanes (NEXTseq e.g.) will generate 4 fastq.gz files per sample labeled L001-L004. 
+2. Replicate samples with distinct i5 and/or i7 barcodes. Different UMIs do not count as distinct barcodes for this purpose. 
+
+If 1 or 2 apply to your output:
+
+		samtools merge -@ <threads> <merged_sample_name.bam> <sample_1.bam> <sample_2.bam> ... <sample_n.bam>
 ### Sample Bioconductor GUIDEseq Input
 
+		library(hash)
+		library(GUIDEseq)
+		library(BSgenome.Hsapiens.UCSC.hg38)
+		library(TxDb.Hsapiens.UCSC.hg38.knownGene)
+		library(org.Hs.eg.db)
+		
+		guideSeqResults <- GUIDEseqAnalysis(
+		alignment.inputfile = c(POS_STRAND.bam,NEG_STRAND.BAM),
+		umi.inputfile=c("UMIs.txt","UMIs.txt"),
+		gRNA.file = gRNA_FILE.fa,
+		max.mismatch = 10,
+		BSgenomeName = Hsapiens,txdb = TxDb.Hsapiens.UCSC.hg38.knownGene,
+		orgAnn = org.Hs.egSYMBOL,
+		outputDir= SAMPLE_NAME,
+		n.cores.max = NUMBER_THREADS)
 
 
