@@ -105,15 +105,15 @@ Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus 
 	
 		Total Runtime: 130 min
 		CPU time: 23578.08 sec
-    		Max Memory: 12673 MB
-    		Average Memory: 4451.26 MB
-		___
+		Max Memory: 12673 MB
+		Average Memory: 4451.26 MB
+		
 - 24 cores, 48G RAM
 
 		Total Runtime: 22 min
 		CPU time: 11066.98 sec
-    		Max Memory: 12798 MB
-    		Average Memory: 2595.86 MB
+		Max Memory: 12798 MB
+		Average Memory: 2595.86 MB
 
 - 32 cores, 48G RAM
 
