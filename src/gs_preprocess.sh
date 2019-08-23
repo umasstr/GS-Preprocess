@@ -2,7 +2,7 @@
 echo "GUIDE-seq pre-processing for GHPCC"
 
 if [ "$1" == "-h" ]; then
-  echo "-t <number_of_threads> -o <output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>"
+  echo "-t <number_of_threads> -o </path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>"
   echo "gs_preprocess output: output_dir/bam_files"
   echo "Required: 50G RAM"
   echo "Illumina-format SampleSheet: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/"
@@ -30,6 +30,9 @@ done
 ./gs_demultiplex.sh -t $t -o $o -r $r -s $s
 
 ./gs_I2.sh -t $t -o $o -r $r
+
+python UMIbarcode_python2.py $o/temp_I2/*I2*.gz > UMIs.txt
+rm -rf temp_I2
 
 python ./gs_cutadapt.py $o
 
