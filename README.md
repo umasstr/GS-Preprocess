@@ -117,7 +117,10 @@ Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus 
 
 - 32 cores, 48G RAM
 
-		___
+		Total Runtime: 19 min
+		CPU time: 11373.65 sec
+		Max Memory: 12854 MB
+		Average Memory: 2524.71 MB
 ## Post GS-Preprocess Notes
 ### guideRNA fasta
 Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
