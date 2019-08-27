@@ -135,9 +135,13 @@ Certain situations will require user to merge BAM files:
 1. A sequencer with multiple lanes (NEXTseq e.g.) will generate 4 fastq.gz files per sample labeled L001-L004. 
 2. Replicate samples with distinct i5 and/or i7 barcodes. Different UMIs do not count as distinct barcodes for this purpose. 
 
-If 1 or 2 apply to your output:
+To merge technical replicates, consider:
 
 		samtools merge -@ <threads> <merged_sample_name.bam> <sample_1.bam> <sample_2.bam> ... <sample_n.bam>
+		
+To merge Lane 1-4 BAMs, consider:
+
+		for i in *L001.bam;do samtools merge -@ 5 ${i%_S*}.bam ${i%_S*}*.bam;done
 ### Sample Bioconductor GUIDEseq Input
 
 		library(hash)
