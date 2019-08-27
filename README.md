@@ -141,7 +141,7 @@ To merge technical replicates, consider:
 		
 To merge Lane 1-4 BAMs, consider:
 
-		for i in *L001.bam;do samtools merge -@ 5 ${i%_S*}.bam ${i%_S*}*.bam;done
+		for i in *L001.bam;do samtools merge -@ <threads> ${i%_S*}.bam ${i%_S*}*.bam;done
 ### Sample Bioconductor GUIDEseq Input
 
 		library(hash)
