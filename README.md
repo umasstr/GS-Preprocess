@@ -17,7 +17,7 @@
 - [Merging BAMs](https://github.com/umasstr/GS-Preprocess#merging-bams)
 - [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
 ## Introduction 
-GS-Preprocess is a simple, 5-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. The latter two are produced by GS-Preprocess.
+GS-Preprocess is a one-line, 6-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. 
 
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
 ## Getting Started
@@ -89,14 +89,14 @@ Make all files executable
 ##  Workflow
 ![alt text](workflow_gs3.png)
 ## Run the Pipeline
-	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
+	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence>
 
 To avoid errors, use absolute paths. 
 
-Completion of gs_preprocess.sh generates 2 of 3 inputs needed for Bioconductor GUIDEseq and stores them in working directory (GS-Preprocess/src/) 
+Completion of gs_preprocess.sh generates all 3 inputs needed for Bioconductor GUIDEseq and stores them in working directory (GS-Preprocess/src/) 
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
-- [ ] guideRNA.fa
+- [x] guideRNA.fa
 ### Expected Runtime & Resource Usage
 Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus and minus strand):
 	
@@ -121,14 +121,6 @@ Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus 
 		Max Memory: 12854 MB
 		Average Memory: 2524.71 MB
 ## Post GS-Preprocess Notes
-### guideRNA fasta
-Bioconductor GUIDEseq accepts a standard 20bp gRNA sequence in the fasta format.
-1. Open any text editor
-2. Enter in your gRNA name and sequence
-3. Save this 2-line text file with a **.fa extension**
-
-		>gRNA_or_gene_name
-		GAGTCCGAGCAGAAGAAGAA
 ### Merging BAMs
 Certain situations will require user to merge BAM files:
 1. A sequencer with multiple lanes (NEXTseq e.g.) will generate 4 fastq.gz files per sample labeled L001-L004. 
