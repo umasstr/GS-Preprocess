@@ -87,7 +87,7 @@ Make all files executable
 
 	chmod +x *
 ##  Workflow
-![alt text](workflow_gs2.png)
+![alt text](workflow_gs3.png)
 ## Run the Pipeline
 	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa>
 
