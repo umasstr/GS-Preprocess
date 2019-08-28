@@ -13,7 +13,6 @@
 - [Expected Runtime and Resource Usage](https://github.com/umasstr/GS-Preprocess#expected-runtime--resource-usage)
 
 [Post GS-Preprocess Notes](https://github.com/umasstr/GS-Preprocess#post-gs-preprocess-notes)
-- [gRNA fasta](https://github.com/umasstr/GS-Preprocess#guiderna-fasta)
 - [Merging BAMs](https://github.com/umasstr/GS-Preprocess#merging-bams)
 - [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
 ## Introduction 
