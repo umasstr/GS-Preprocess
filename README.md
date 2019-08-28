@@ -33,7 +33,6 @@ This pipeline is compatible with ***ANY SEQUENCER*** and requires ***NO PRE-CONF
 ###### adapted from Tsai et al. 2014
 
 ### Prerequisites
-***Intended for use on computing clusters***
 1. **≥32G of RAM allocated to the GS-Preprocess pipeline**
 
 2. **Illumina output folder**: Download from BaseSpace or directly from any Illumina sequencer after run completion. No demultiplexing or fastq generation necessary!
