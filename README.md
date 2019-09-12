@@ -69,7 +69,7 @@ This pipeline is compatible with ***ANY ILLUMINA SEQUENCER*** and ***WITHOUT PRE
 	R/3.6.0
 	bwa/0.7.5a
 	cutadapt/1.9
-	gcc/8.1.0
+	gcc/8.1.0 #may not be necessary, depending on OS
 	
 Example:
 >module add bcl2fastq2/2.20.0
