@@ -39,7 +39,9 @@ RUN apk add --update --no-cache ncurses \
 
 RUN apk add python2 py-pip python-dev && pip install cutadapt
 
-RUN apk add --update pcre-dev openssl-dev \
+ENV SAMTOOLS_VERSION 1.9
+ENV TABIX_VERSION 0.2.6
+RUN apk add --update pcre-dev \
     && apk add --virtual build-dependencies build-base curl \
     && curl -L -o samtools-${SAMTOOLS_VERSION}.tar.bz2 \
         http://jaist.dl.sourceforge.net/project/samtools/samtools/${SAMTOOLS_VERSION}/samtools-${SAMTOOLS_VERSION}.tar.bz2 \
@@ -56,4 +58,9 @@ RUN apk add --update pcre-dev openssl-dev \
     && ln -sf /tabix-${TABIX_VERSION}/tabix /usr/local/bin/ \
     && apk del build-dependencies \
     && rm -rf /var/chache/apk/*
- 
+
+RUN apk add bash
+COPY bioc.R /tmp/
+RUN Rscript /tmp/bioc.R && rm /tmp/bioc.R
+
+CMD [ "/bin/bash" ]
