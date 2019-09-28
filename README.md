@@ -37,9 +37,10 @@ In the container, navigate to /GS-Preprocess
 
 		cd GS-Preprocess
 		
-Run the pipeline as decreibed in [Run the Pipeline](https://github.com/umasstr/GS-Preprocess#run-the-pipeline), referencing the /DATA directory containing your mounted data. 
+Run the pipeline as decribed in [Run the Pipeline](https://github.com/umasstr/GS-Preprocess#run-the-pipeline), referencing the /DATA directory containing your mounted data. 
 
-After your BAM, FASTA and UMI reference files are generated, proceed with Bioconductor GUIDEseq analysis here: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
+After your BAM, FASTA and UMI reference files are generated, proceed with Bioconductor GUIDEseq analysis here: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input). The container has R 3.6.0 preloaded and GUIDEseq preinstalled.
+
 ## Getting Started
 ### Set Up Sequencing Run
 This pipeline is compatible with ***ANY ILLUMINA SEQUENCER*** and ***WITHOUT PRE-CONFIGURATION***. This represents a  flexible alternative to https://github.com/aryeelab/guideseq#miseq which requires a pre-configured MiSeq and sample manifest YAML.
