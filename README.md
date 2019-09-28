@@ -26,16 +26,16 @@ GS-Preprocess is available in a Docker container to users who do not have (or ca
 
 Download the GS-Preprocess container
 		
-		docker pull umasstr/gsp
+	docker pull umasstr/gsp
 		
 Navigate to a directory containing (i) Illumina "Data/" directory (ii) CSV SampleSheet (iii) RunInfo.xml
 Enter the container, mounting the above items into a new folder, "/DATA"
 
-		docker run -it -v $PWD:/DATA umasstr/gsp
+	docker run -it -v $PWD:/DATA umasstr/gsp
 
 In the container, navigate to /GS-Preprocess
 
-		cd GS-Preprocess
+	cd GS-Preprocess
 		
 Run the pipeline as decribed in [Run the Pipeline](https://github.com/umasstr/GS-Preprocess#run-the-pipeline), referencing the /DATA directory containing your mounted data. 
 
