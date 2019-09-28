@@ -19,6 +19,25 @@
 GS-Preprocess is a one-line, 6-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. 
 
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
+### Using Docker
+GS-Preprocess is available in a Docker container to users who do not have (or cannot install) the below dependencies. For more information on using Docker, visit docker.io. Setup and run instructions:
+
+Download the GS-Preprocess container
+		
+		docker pull umasstr/gsp
+		
+Navigate to a directory containing (i) Illumina "Data/" directory (ii) CSV SampleSheet (iii) RunInfo.xml
+Enter the container, mounting the above items into a new folder, "/DATA"
+
+		docker run -it -v $PWD:/DATA umasstr/gsp
+
+In the container, navigate to /GS-Preprocess
+
+		cd GS-Preprocess
+		
+Run the pipeline as decreibed in [Run the Pipeline](https://github.com/umasstr/GS-Preprocess#run-the-pipeline), referencing the /DATA directory containing your mounted data. 
+
+After your BAM, FASTA and UMI reference files are generated, proceed with Bioconductor GUIDEseq analysis here: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
 ## Getting Started
 ### Set Up Sequencing Run
 This pipeline is compatible with ***ANY ILLUMINA SEQUENCER*** and ***WITHOUT PRE-CONFIGURATION***. This represents a  flexible alternative to https://github.com/aryeelab/guideseq#miseq which requires a pre-configured MiSeq and sample manifest YAML.
@@ -150,5 +169,6 @@ To merge Lane 1-4 BAMs, consider:
 		orgAnn = org.Hs.egSYMBOL,
 		outputDir= SAMPLE_NAME,
 		n.cores.max = NUMBER_THREADS)
+
 
 
