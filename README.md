@@ -1,7 +1,7 @@
 # GS-Preprocess
 ## Table of Contents
 [Introduction](https://github.com/umasstr/GS-Preprocess#introduction)
-
+[Using Docker](https://github.com/umasstr/GS-Preprocess#using-docker)
 [Getting Started](https://github.com/umasstr/GS-Preprocess#getting-started)
 - [Set Up Sequencing Run](https://github.com/umasstr/GS-Preprocess#set-up-sequencing-run)
 - [Prerequisites](https://github.com/umasstr/GS-Preprocess#prerequisites)
@@ -19,7 +19,7 @@
 GS-Preprocess is a one-line, 6-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. 
 
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
-### Using Docker
+## Using Docker
 GS-Preprocess is available in a Docker container to users who do not have (or cannot install) the below dependencies. For more information on using Docker, visit docker.io. Setup and run instructions:
 
 Download the GS-Preprocess container
