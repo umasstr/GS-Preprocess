@@ -22,7 +22,7 @@ GS-Preprocess is a one-line, 6-argument pipeline that generates input data for t
 
 Compatible libraries are constructed according to *GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases* (https://doi.org/10.1038/nbt.3117).
 ## Using Docker
-GS-Preprocess is available in a Docker container to users who do not have (or cannot install) the below dependencies. For more information on using Docker, visit docker.io. Setup and run instructions:
+GS-Preprocess is available in a Docker container to users who do not have (or cannot install) the [dependencies](https://github.com/umasstr/GS-Preprocess#dependencies). For more information on using Docker, visit docker.io. Setup and run instructions:
 
 Download the GS-Preprocess container
 		
