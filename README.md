@@ -1,7 +1,9 @@
 # GS-Preprocess
 ## Table of Contents
 [Introduction](https://github.com/umasstr/GS-Preprocess#introduction)
+
 [Using Docker](https://github.com/umasstr/GS-Preprocess#using-docker)
+
 [Getting Started](https://github.com/umasstr/GS-Preprocess#getting-started)
 - [Set Up Sequencing Run](https://github.com/umasstr/GS-Preprocess#set-up-sequencing-run)
 - [Prerequisites](https://github.com/umasstr/GS-Preprocess#prerequisites)
