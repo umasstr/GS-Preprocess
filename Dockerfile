@@ -62,5 +62,7 @@ RUN apk add --update pcre-dev \
 RUN apk add bash
 COPY bioc.R /tmp/
 RUN Rscript /tmp/bioc.R && rm /tmp/bioc.R
-
+WORKDIR /
+RUN mkdir -p /GS-Preprocess 
+COPY ./src /GS-Preprocess/ 
 CMD [ "/bin/bash" ]
