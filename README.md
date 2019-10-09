@@ -77,7 +77,7 @@ This pipeline is compatible with ***ANY ILLUMINA SEQUENCER*** and ***WITHOUT PRE
 		|-- RunParameters.xml
 		|-- Thumbnail_Images
 
-     - **Illumina-format SampleSheet**: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output)
+     - **Illumina-format SampleSheet**: https://help.basespace.illumina.com/articles/descriptive/sample-sheet/ This sheet is in .csv format and is commonly used to demultiplex illumina .bcl files (raw sequencer output). **A0# and i70# Index must be listed as its REVERSE COMPLIMENT on the Sample Sheet!** This is a consequence of the way in which the indexing primers are used in the Tsai et al. library prep method. See my premade "SampleSheet.csv" and "Indexes.csv", or use https://github.com/LJI-Bioinformatics/Excel-Reverse-Complement. 
 ![alt text](SampleSheet2.jpg)
      - **RunInfo.xml**: Contains high-level run information,such as the number of Reads and cycles in the sequencing run. This file is standard output from any illumina sequencer and will automatically populate in any run output folder. *RunInfo.xml is found in the top-level output folder of any sequencing run*
 
