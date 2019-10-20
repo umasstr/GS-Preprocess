@@ -115,7 +115,7 @@ Make all files executable
 
 To avoid errors, use absolute paths. 
 
-Completion of gs_preprocess.sh generates all 3 inputs needed for Bioconductor GUIDEseq and stores them in working directory (GS-Preprocess/src/) 
+Completion of gs_preprocess.sh generates all 3 inputs needed for Bioconductor GUIDEseq and stores them in **working directory (GS-Preprocess/src/)** 
 - [x] plus- and minus-strand BAMs
 - [x] UMIs.txt
 - [x] guideRNA.fa
