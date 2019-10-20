@@ -164,13 +164,13 @@ To merge Lane 1-4 BAMs, consider:
 		library(org.Hs.eg.db)
 		
 		guideSeqResults <- GUIDEseqAnalysis(
-		alignment.inputfile = c(POS_STRAND.bam,NEG_STRAND.BAM),
+		alignment.inputfile = c("POS_STRAND.bam","NEG_STRAND.BAM"),
 		umi.inputfile=c("UMIs.txt","UMIs.txt"),
-		gRNA.file = gRNA_FILE.fa,
+		gRNA.file = "gRNA_FILE.fa",
 		max.mismatch = 10,
 		BSgenomeName = Hsapiens,txdb = TxDb.Hsapiens.UCSC.hg38.knownGene,
 		orgAnn = org.Hs.egSYMBOL,
-		outputDir= SAMPLE_NAME,
+		outputDir= "SAMPLE_NAME",
 		n.cores.max = NUMBER_THREADS)
 
 
