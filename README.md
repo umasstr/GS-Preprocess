@@ -174,6 +174,8 @@ To merge Lane 1-4 BAMs, consider:
 		n.cores.max = NUMBER_THREADS)
 
 GUIDEseq Dependency R Installation (One Time Only):
+		
+		
 		install.packages("BiocManager")
 		BiocManager::install("hash")
 		BiocManager::install("BSgenome.Hsapiens.UCSC.hg38")
