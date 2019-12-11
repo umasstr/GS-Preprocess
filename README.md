@@ -173,5 +173,17 @@ To merge Lane 1-4 BAMs, consider:
 		outputDir= "SAMPLE_NAME",
 		n.cores.max = NUMBER_THREADS)
 
+GUIDEseq Dependency R Installation (One Time Only):
+		install.packages("BiocManager")
+		BiocManager::install("hash")
+		BiocManager::install("BSgenome.Hsapiens.UCSC.hg38")
+		BiocManager::install("TxDb.Hsapiens.UCSC.hg38.knownGene")
+		if (!requireNamespace("BiocManager", quietly = TRUE))
+    			install.packages("BiocManager")
+		BiocManager::install("GUIDEseq")
+		
+Please note the "hg38" genome selection. This can be changed to the assembly of your choice.
+		
+		
 
 
