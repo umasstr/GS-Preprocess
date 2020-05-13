@@ -29,7 +29,7 @@ Download the GS-Preprocess container
 	docker pull umasstr/gsp:latest
 		
 Navigate to a directory containing (i) Illumina "Data/" directory (ii) CSV SampleSheet (iii) RunInfo.xml
-Enter the container, mounting the above items into a new folder, "/DATA"
+Enter the container:
 
 	docker run -it -v $PWD:/ umasstr/gsp
 
