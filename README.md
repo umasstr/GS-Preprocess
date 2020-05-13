@@ -35,9 +35,10 @@ Enter the container, mounting the above items into a new folder, "/DATA"
 
 Demultiplex, align and generate UMI reference files
 
-	gs_preprocess -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence>
+	gs_preprocess -t <threads> -o <output_dir> -r <directory_containing_RunInfo.xml> -s <SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence>
 	
-After your BAM, FASTA and UMI reference files are generated, proceed with Bioconductor GUIDEseq analysis here: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input). The container has R 3.6.0 preloaded and GUIDEseq preinstalled.
+Open R in the container and proceed with Bioconductor GUIDEseq analysis: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input). The container has R 4.0 preloaded and GUIDEseq preinstalled.
+
 
 ## Getting Started
 ### Set Up Sequencing Run
