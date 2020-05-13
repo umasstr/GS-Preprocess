@@ -2,7 +2,7 @@
 ## Table of Contents
 [Introduction](https://github.com/umasstr/GS-Preprocess#introduction)
 
-[Using Docker](https://github.com/umasstr/GS-Preprocess#using-docker)
+[Run Using Docker](https://github.com/umasstr/GS-Preprocess#using-docker)
 
 [Getting Started](https://github.com/umasstr/GS-Preprocess#getting-started)
 - [Set Up Sequencing Run](https://github.com/umasstr/GS-Preprocess#set-up-sequencing-run)
@@ -26,19 +26,17 @@ GS-Preprocess is available in a Docker container to users who do not have (or ca
 
 Download the GS-Preprocess container
 		
-	docker pull umasstr/gsp
+	docker pull umasstr/gsp:latest
 		
 Navigate to a directory containing (i) Illumina "Data/" directory (ii) CSV SampleSheet (iii) RunInfo.xml
 Enter the container, mounting the above items into a new folder, "/DATA"
 
 	docker run -it -v $PWD:/DATA umasstr/gsp
 
-In the container, navigate to /GS-Preprocess
+Demultiplex, align and generate UMI reference files
 
-	cd GS-Preprocess
-		
-Run the pipeline as decribed in [Run the Pipeline](https://github.com/umasstr/GS-Preprocess#run-the-pipeline), referencing the /DATA directory containing your mounted data. 
-
+	gs_preprocess -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence>
+	
 After your BAM, FASTA and UMI reference files are generated, proceed with Bioconductor GUIDEseq analysis here: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input). The container has R 3.6.0 preloaded and GUIDEseq preinstalled.
 
 ## Getting Started
