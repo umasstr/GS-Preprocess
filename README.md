@@ -31,7 +31,7 @@ Download the GS-Preprocess container
 Navigate to a directory containing (i) Illumina "Data/" directory (ii) CSV SampleSheet (iii) RunInfo.xml
 Enter the container:
 
-	docker run -it -v $PWD:/DATA umasstr/gsp
+	docker run -it -v "$PWD":/DATA umasstr/gsp
 	cd DATA/
 
 Demultiplex, align and generate UMI reference files
