@@ -168,7 +168,7 @@ To merge Lane 1-4 BAMs, consider:
 		umi.inputfile=c("UMIs.txt","UMIs.txt"),
 		gRNA.file = "gRNA_FILE.fa",
 		max.mismatch = 10,
-		BSgenomeName = Hsapiens,txdb = TxDb.Hsapiens.UCSC.hg38.knownGene,
+		BSgenomeName = TxDb.Hsapiens.UCSC.hg38.knownGene,
 		orgAnn = org.Hs.egSYMBOL,
 		outputDir= "SAMPLE_NAME",
 		n.cores.max = NUMBER_THREADS)
