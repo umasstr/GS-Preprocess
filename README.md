@@ -36,7 +36,7 @@ Enter the container:
 
 Demultiplex, align and generate UMI reference files
 
-	gs_preprocess -t <threads> -o <output_dir> -r <directory_containing_RunInfo.xml> -s <SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence>
+	gs_preprocess -t <threads> -o <output_dir> -r <directory_containing_RunInfo.xml> -s <SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence> -I <# UMI nt, default=8>
 	
 Open R in the container and proceed with Bioconductor GUIDEseq analysis: [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input). The container has R 4.0 preloaded and GUIDEseq preinstalled.
 
@@ -111,7 +111,7 @@ Make all files executable
 ##  Workflow
 ![alt text](workflow_gs3.png)
 ## Run the Pipeline
-	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence>
+	./gs_preprocess.sh -t <number_of_threads> -o </absolute/path/to/output_directory> -r <directory_containing_RunInfo.xml> -s </path/to/SampleSheet.csv> -b </path/to/BWAIndex/genome.fa> -g <gRNA_sequence> -I <# UMI nt, default>
 
 To avoid errors, use absolute paths. 
 
