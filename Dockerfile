@@ -51,10 +51,8 @@ RUN apt-get clean
 
 COPY src/gs_preprocess.sh /usr/local/bin/gs_preprocess
 RUN chmod +x /usr/local/bin/gs_preprocess
-
 COPY src/gs_preprocess.sh /usr/local/bin/gs_preprocess
 RUN chmod +x /usr/local/bin/gs_preprocess
-
 
 ENTRYPOINT []
 CMD ["/bin/bash"]

@@ -62,8 +62,7 @@ zcat $o/temp_I2/Undetermined_S0_L001_I2_001.fastq.gz | awk -v a="$I" 'NR % 4 == 
 
 if [ $? -ne 0 ]; then echo "Error in the UMI library generation step. Exiting."; exit 1; fi
 
-
-for x in $o/*_R1.fq; do bwa mem -t $t $g $x ${x%_R1*}_R2.fq | samtools view -Sb -@ $t - | samtools sort -@ $t - > ${x%_R1*}.bam; done
+for x in $o/*_R1.fq; do bwa mem -t $t "$b" "$x" "${x%_R1*}_R2.fq" | samtools view -Sb -@ $t - | samtools sort -@ $t - > ${x%_R1*}.bam; done
 
 if [ $? -ne 0 ]; then echo "Error in the alignment (BWA) step. Exiting."; exit 1; fi
 
