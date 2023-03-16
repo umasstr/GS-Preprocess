@@ -29,7 +29,7 @@ while getopts t:o:r:s:b:g:I: options; do
 done
 
 
-bcl2fastq -r 1 -p $t -w 1 --runfolder-dir $r -o $o --use-bases-mask Y*,I*,N"$I"I8,Y* --create-fastq-for-index-reads --sample-sheet $s 
+bcl2fastq -r 1 -p $t -w 1 --runfolder-dir $r -o $o --use-bases-mask Y*,I*,N"$I"I8,Y* --barcode-mismatches 0 --create-fastq-for-index-reads --sample-sheet $s 
 
 if [ $? -ne 0 ]; then echo "Error in the demultiplexing step. Exiting."; exit 1; fi
 
