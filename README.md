@@ -157,6 +157,8 @@ Once in the container, set environment variables not carried over:
 	export PATH=/share/pkg/conda/cutadapt/4.1/bin:$PATH
 	
 Run the pipeline as directed above, calling the gs_preprocess command.
+
+Note: Loading a docker image through Singularity does not completely recapitulate the containerized environment offered by docker. For example, my server does not allow me to run the GUIDEseq R package due to library conflicts. In this case, I transfer the pre-processed files to my local machine where I can run the container with docker. 
 		
 ## Post GS-Preprocess Notes
 ### Merging BAMs
