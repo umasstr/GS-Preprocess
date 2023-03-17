@@ -14,6 +14,8 @@
 [Run the Pipeline](https://github.com/umasstr/GS-Preprocess#run-the-pipeline)
 - [Expected Runtime and Resource Usage](https://github.com/umasstr/GS-Preprocess#expected-runtime--resource-usage)
 
+[Run the Pipeline on a Server](https://github.com/umasstr/GS-Preprocess/edit/master/README.md#run-the-pipeline-on-a-server)
+
 [Post GS-Preprocess Notes](https://github.com/umasstr/GS-Preprocess#post-gs-preprocess-notes)
 - [Merging BAMs](https://github.com/umasstr/GS-Preprocess#merging-bams)
 - [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
@@ -142,6 +144,20 @@ Benchmarks for a 10 million read run with 40 uniquely barcoded samples (20 plus 
 		CPU time: 11373.65 sec
 		Max Memory: 12854 MB
 		Average Memory: 2524.71 MB
+		
+		
+## Run the Pipeline on a Server
+
+If you're using a cluster or server, consider running the docker image in Singularity. Generally, docker images can be pulled from your home directory, but check with your local admins if using Singularity for the first time.
+
+	singularity shell docker://umasstr/gsp:latest
+
+Once in the container, set environment variables not carried over:
+
+	export PATH=/share/pkg/conda/cutadapt/4.1/bin:$PATH
+	
+Run the pipeline as directed above, calling the gs_preprocess command.
+		
 ## Post GS-Preprocess Notes
 ### Merging BAMs
 Certain situations will require user to merge BAM files:
