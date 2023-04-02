@@ -7,7 +7,7 @@ if [ $# -ne 1 ]; then
 fi
 
 # Get the 7th column and remove quotes and the first line
-column=$(cut -f2,7 "$1" | tr -d '"' | tr -d '\^' | tr -d '\-' | sed '1d' | sort -k1,1n | cut -f2 | tac)
+column=$(cut -f2,7 "$1" | tr -d '"' | tr '\^' 'i' | tr '\-' 'd' | sed '1d' | sort -k1,1n | cut -f2 | tac)
 
 # Define color codes
 red='\033[0;31m'
@@ -43,5 +43,5 @@ paste -d'\t' <(for (( i=0; i<${#column}; i++ )); do
             printf "${column:$i:1}"
             ;;
     esac
-done) <(cut -f2,7 "$1" | tr -d '"' | tr -d '\^' | tr -d '\-' | sed '1d' | sort -k1,1n | cut -f1 | tac) 
+done) <(cut -f2,7 "$1" | tr -d '"' | tr '\^' 'i' | tr '\-' 'd' | sed '1d' | sort -k1,1n | cut -f1 | tac) 
 echo ""
