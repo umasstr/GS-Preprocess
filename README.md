@@ -222,6 +222,7 @@ To visualize the output, you can use the shell script "guideseq_plot.sh" as show
 	
 You can pipe the output into aha and turn this into an html file that preserves the color and position of each character.
 
+	# if aha not already installed: sudo apt-get update && sudo apt-get install -y aha
 	guideseq_plot.sh Sample01_output_folder/offTargetsInPeakRegions.xls | aha > output.html
 
 ![image](https://user-images.githubusercontent.com/44478133/229323381-cf498193-5918-46f6-8969-ccc6e63500d3.png)
