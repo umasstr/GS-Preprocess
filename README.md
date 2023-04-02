@@ -226,6 +226,4 @@ You can pipe the output into aha and turn this into an html file that preserves 
 
 ![image](https://user-images.githubusercontent.com/44478133/229323381-cf498193-5918-46f6-8969-ccc6e63500d3.png)
 
-
-https://mismatch.netlify.app/
-
+Alternatively, you can use our somewhat buggy [web app]([url](https://mismatch.netlify.app/)) which adapts visualizstion code directly from Tsai et al. We are thankful to the authors for making their code available and clear, and hope that you will cite their [NBT article]([url](https://www.nature.com/articles/nbt.3534)).
