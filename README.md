@@ -20,7 +20,7 @@
 - [Merging BAMs](https://github.com/umasstr/GS-Preprocess#merging-bams)
 - [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
 
-[Visualizing Results](https://github.com/umasstr/GS-Preprocess/edit/master/README.md#visualizing-results)
+[Visualizing Results](https://github.com/umasstr/GS-Preprocess#visualizing-results)
 
 ## Introduction 
 GS-Preprocess is a one-line, 6-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. 
