@@ -19,6 +19,9 @@
 [Post GS-Preprocess Notes](https://github.com/umasstr/GS-Preprocess#post-gs-preprocess-notes)
 - [Merging BAMs](https://github.com/umasstr/GS-Preprocess#merging-bams)
 - [Sample Bioconductor GUIDEseq Input](https://github.com/umasstr/GS-Preprocess#sample-bioconductor-guideseq-input)
+
+[Visualizing Results](https://github.com/umasstr/GS-Preprocess/edit/master/README.md#visualizing-results)
+
 ## Introduction 
 GS-Preprocess is a one-line, 6-argument pipeline that generates input data for the **GUIDEseq Bioconductor package** (https://doi.org/doi:10.18129/B9.bioc.GUIDEseq) from raw Illumina sequencer output. For off-target profiling, Bioconductor GUIDEseq only requires a 2-line **guideRNA fasta**, demultiplexed **BAM files** of "plus"- and "minus"-strands, and **Unique Molecular Index (UMI) references** for each read. 
 
@@ -205,6 +208,24 @@ GUIDEseq Dependency R Installation (One Time Only):
 		
 Please note the "hg38" genome selection. This can be changed to the assembly of your choice.
 		
-		
+## Visualizing Results
 
+The basic output of GUIDEseqAnalysis (see above section) is offTargetsInPeakRegions.xls
+
+![image](https://user-images.githubusercontent.com/44478133/229323134-baade196-4c22-45ad-9642-9fccdc0668bc.png)
+
+To visualize the output, you can use the shell script "guideseq_plot.sh" as shown below to print a color-coded mismatch plot in your terminal.
+
+	guideseq_plot.sh Sample01_output_folder/offTargetsInPeakRegions.xls
+	
+![image](https://user-images.githubusercontent.com/44478133/229323414-84bb19b5-fece-4db9-8a28-5ea0d2ab2625.png)
+	
+You can pipe the output into aha and turn this into an html file that preserves the color and position of each character.
+
+	guideseq_plot.sh Sample01_output_folder/offTargetsInPeakRegions.xls | aha > output.html
+
+![image](https://user-images.githubusercontent.com/44478133/229323381-cf498193-5918-46f6-8969-ccc6e63500d3.png)
+
+
+https://mismatch.netlify.app/
 
